@@ -45,11 +45,11 @@ body{
 .div-coluna{
     background-color: #f4f3f1;
     color: black;
-    width: 40px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 5px;
     font-size: 25px;
-    margin-right: 10px;
+    margin-right: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@ body{
     color: white;
 }
 
-.deslocado{
+.deslocada{
     background-color: #d3ad69;
     color: white;
 }
@@ -98,4 +98,14 @@ body{
     margin-right: 5px;
     border: 1px solid black;
     cursor: pointer;
+}
+
+button{
+    margin-right: 27px;
+    background-color: #f4f3f1;
+    color: black;
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    margin-bottom: 6px;
 }

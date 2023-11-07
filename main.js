@@ -19,13 +19,14 @@ let colunaAtual = 0
 
 //Definindo o array de palavras
 let palavras = ['SENAI', 'NOITE', 'MILHO', 'LETRA', 'MOUSE']
+// console.log(palavra)
 
 //Seleciona uma palavra aleatória dentro do array palavras e guarda na variável palavra
 let palavra = palavras[Math.floor(Math.random() * palavras.length)]
 let palavraMapa = {}
-for (let i = 0; i < palavras.length; i++) {
+for (let i = 0; i < palavra.length; i++) {
     //separa as letras da palavra
-    palavraMapa[palavras[i] = i]//separa cada letra em uma posição do palavraLinha -- palavraMapa ['S', 'E', 'A', 'N','I'],
+    palavraMapa[palavra[i]] = i//separa cada letra em uma posição do palavraLinha -- palavraMapa ['S', 'E', 'A', 'N','I'],
 }
 
 const tentativas = []
@@ -35,7 +36,7 @@ for (let linhaIndex = 0; linhaIndex < linha; linhaIndex++) {
     //vai montar as linhas
     tentativas[linhaIndex] = new Array(coluna)
     const divisaoLinha = document.createElement('div')  //cria um novo array com o numero total de colunas
-    divisaoLinha.setAttribute('id', 'linha' + linhaIndex) //cria uma nova dic
+    divisaoLinha.setAttribute('id', 'linha' + linhaIndex) //cria uma nova div
     divisaoLinha.setAttribute('class', 'div-linha')    //define o atributo ID
     for (let colunaIndex = 0; colunaIndex < coluna; colunaIndex++) {
         //vai mostrar as colunas
@@ -165,6 +166,6 @@ document.onkeydown = function(evt){
     }else if (evt.key === 'Backspace'){
         backspace()
     }else{
-        tecladoOnClick(evt.key.toLocaleLowerCase())
+        tecladoOnClick(evt.key.toUpperCase())
     }
 }
